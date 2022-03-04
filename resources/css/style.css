@@ -1,0 +1,480 @@
+/*====================================
+        CSS Index
+   --------------------
+   1. Common CSS
+   2. Reuseable component
+   3. Header Section
+   4. About Section
+   5. Process Section
+   6. Exprience Section
+   7. Portfolio Section
+   8. Testimonial Section
+   9. Contact Section
+   10.Footer Section
+=====================================*/
+
+
+/*====================================
+        Google Fonts
+=====================================*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&family=Roboto:wght@300;400&display=swap');
+
+/*====================================
+        1. Common CSS
+=====================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+}
+html, body {
+    background: #fff;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+h1 {
+    font-weight: 700;
+    font-size: 650%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+h2 {
+    font-size: 400%;
+}
+h3 {
+    font-size: 280%;
+}
+h4 {
+    font-size: 18px;
+}
+p {
+    font-size: 140%;
+}
+li {
+    list-style: none;
+}
+/*====================================
+        2. Reuseable Component
+=====================================*/
+.row {
+    max-width: 1200px;
+    margin: auto;
+}
+section {
+    padding: 80px 0;
+}
+.section__title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section__title p {
+    font-size: 170%;
+    color: #222222;
+    margin-top: 40px;
+    line-height: 1.6;
+}
+.btn, .btn:link, .btn:visited {
+    width: 200px;
+    background: crimson;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 180%;
+    padding: 10px 0;
+    border: 2px solid crimson;
+    transition: .5s;
+}
+.btn:hover, .btn:active {
+    background: transparent;
+    color: crimson;
+}
+/*====================================
+       3. Header Section Start
+=====================================*/
+#header__section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/pexels-lukas-rychvalsky-670720.jpg) no-repeat center / cover;
+}
+.nav__logo {
+    float: left;
+    margin-top: 45px;
+}
+.nav__icon {
+    color: #fff;
+    float: right;
+    margin-top: 45px;
+}
+.nav__icon ion-icon {
+    font-size: 45px;
+    border: 1px solid #fff;
+}
+.header__text__box {
+    width: 1180px;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+}
+h1::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+}
+.header__text__box span {
+    font-family: 'Roboto' sans-serif;
+    font-size: 200%;
+    color: #fff;
+    display: inline-block;
+    margin-top: 18px;
+}
+/*====================================
+       4. About Section Start
+=====================================*/
+.grid__about__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 50px;
+}
+.paul__img {
+    width: 100%;
+    height: 100%;
+}
+.intro {
+    font-size: 180%;
+    color: #222222;
+    font-weight: 700;
+}
+.grid__about__items .discription {
+    font-size: 150%;
+    color: #222;
+    margin: 30px 0;
+}
+
+/*====================================
+       5.Process Section Start
+=====================================*/
+#process {
+    background: #ECF0F6;
+}
+.grid__process__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    text-align: center;
+}
+.grid__process__items {
+    background: #ffff;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.grid__process__items:hover::after, .grid__process__items:hover::before {
+    transform: translate(0%, 0%);
+} 
+.grid__process__items:after {
+    position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2ecc71;
+      content: '';
+      z-index: -1;
+      -ms-transform: translate(100%, 100%);
+      /* IE 9 */
+      -webkit-transform: translate(100%, 100%);
+      /* Chrome, Safari, Opera */
+      transform: translate(100%, 100%);
+      -webkit-transition: 0.5s ease-in;
+      -moz-transition: 0.5s ease-in;
+      -o-transition: 0.5s ease-in;
+      transition: 0.5s ease-in;
+}
+.grid__process__items::before {
+    position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2ecc71;
+      content: '';
+      z-index: -1;
+      -ms-transform: translate(-100%, -100%);
+      /* IE 9 */
+      -webkit-transform: translate(-100%, -100%);
+      /* Chrome, Safari, Opera */
+      transform: translate(-100%, -100%);
+      -webkit-transition: 0.5s ease-in;
+      -moz-transition: 0.5s ease-in;
+      -o-transition: 0.5s ease-in;
+      transition: 0.5s ease-in;
+}
+.grid__process__items ion-icon {
+    font-size: 80px;
+    margin-bottom: 30px;
+    color: #2ECC71;
+}
+.grid__process__items h4 {
+    color: #000;
+    text-transform: uppercase;
+}
+.grid__process__items:hover ion-icon {
+    color: #fff;
+}
+.grid__process__items:hover h4 {
+    color: #fff;
+}
+/*====================================
+       6.Exprience Section Start
+=====================================*/
+#exprience__section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/ex__bg__2.jpg) no-repeat center / cover;
+}
+#exprience__section .section__title {
+    color: #fff;
+}
+.grid__exprience__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.grid__exprience__items {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px 30px;
+}
+.grid__exprience__items h3 {
+    margin-bottom: 30px;
+    color: #fff;
+}
+.exprience__intro h4 {
+    color: #fff;
+    margin-bottom: 6px;
+}
+.exprience__intro span {
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+.exprience__intro p {
+    color: #cccccc;
+}
+.grid__exprience__items hr {
+    margin: 25px auto;
+    border: 1px solid #fff;
+}
+
+/*====================================
+       7.Portfolio Section Start
+=====================================*/
+.grid__portfolio__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    grid-auto-rows: minmax(250px, auto);
+}
+.grid__portfolio__items {
+    background: #2c3e50;
+}
+.grid__portfolio__items:nth-child(1) {
+    background: url(./img/lw-1.jpg) no-repeat center / cover;
+}
+.grid__portfolio__items:nth-child(2) {
+    background: url(./img/lw-2.jpg) no-repeat center / cover;
+}
+.grid__portfolio__items:nth-child(3) {
+    background: url(./img/lw-3.jpg) no-repeat center / cover;
+}
+.grid__portfolio__items:nth-child(4) {
+    background: url(./img/lw-4.jpg) no-repeat center / cover;
+}
+.grid__portfolio__items:nth-child(5) {
+    background: url(./img/lw-5.jpg) no-repeat center / cover;
+    grid-column: 1/3;
+}
+.grid__portfolio__items:nth-child(6) {
+    background: url(./img/lw-6.jpg) no-repeat center / cover;
+}
+.grid__portfolio__items:nth-child(7) {
+    background: url(./img/lw-7.jpg) no-repeat center / cover;
+}
+/*====== Portfolio Bg Animation =======*/
+.grid__portfolio__items:nth-child(1):hover {
+    height: 101%;
+    cursor: pointer;
+    transition: 1s;
+}
+.grid__portfolio__items:nth-child(2):hover {
+    height: 101%;
+    cursor: pointer;
+    transition: 1s;
+}
+.grid__portfolio__items:nth-child(3):hover {
+    height: 101%;
+    cursor: pointer;
+    transition: 1s;
+}
+.grid__portfolio__items:nth-child(4):hover {
+    height: 101%;
+    cursor: pointer;
+    transition: 1s;
+}
+.grid__portfolio__items:nth-child(5):hover {
+    height: 101%;
+    cursor: pointer;
+    transition: 1s;
+}
+.grid__portfolio__items:nth-child(6):hover {
+    height: 101%;
+    cursor: pointer;
+    transition: 1s;
+}
+.grid__portfolio__items:nth-child(7):hover {
+    height: 101%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/*====================================
+       8.Testimonial Section Start
+=====================================*/
+#testimonial__section {
+    background: url(./img/testimonial-2.jpg) no-repeat;
+}
+#testimonial__section .section__title {
+    margin-bottom: 0;
+}
+.grid__testimonial__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.quote img{
+    height: 40px;
+}
+#testimonial__section p {
+    font-size: 160%;
+    color: #000;
+    margin: 45px 0;
+}
+#testimonial__section span {
+    font-size: 140%;
+}
+
+/*====================================
+       9.Contact Section Start
+=====================================*/
+#contact__section {
+    background: linear-gradient(#0A69DD, #f5f6fa );
+}
+#contact__section h2 {
+    color: #fff;
+}
+#contact__section p {
+    color: #fff;
+}
+.grid__contact__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+}
+.grid__contact__items:nth-child(1) {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 45px 30px;
+}
+.grid__contact__items h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.single__form input[type="text"], 
+.single__form input[type="email"],
+.single__form textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px;
+    margin: 10px 0;
+}
+#contact__section .contact__btn {
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.nested__grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+}
+.nested__grid__items {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px 30px;
+}
+.nested__grid__items:nth-child(1) h3 {
+    margin-top: 20px;
+}
+.nested__grid__items p {
+    color: #fff;
+}
+
+/*====================================
+       10.Footer Section Start
+=====================================*/
+#footer__section {
+    background: #4834d4;
+    padding: 20px 0;
+    text-align: center;
+}
+.social__icon {
+    margin-bottom: 6px;
+}
+#footer__section .social__icon li {
+    display: inline-block;
+    border-right: 2px solid #fff;
+    padding: 0 10px;
+}
+#footer__section .social__icon li:last-child {
+    border: none;
+}
+#footer__section .social__icon li a ion-icon {
+    font-size: 22px;
+    color: #fff;
+}
+#footer__section .social__icon li:hover a ion-icon {
+    color: #eb4d4b;
+    transition: .5s;
+}
+#footer__section span {
+    font-size: 13px;
+    color: #fff;
+}
